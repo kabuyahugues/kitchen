@@ -1,0 +1,130 @@
+@use '../abstracts' as *;
+body{
+    background-color: #f8f6f3;
+    color: black;
+    h1{
+        font-family: $cormorant;
+        font-weight: 200;
+        font-size: 1.8rem;
+        @media screen and (min-width: 768px) {
+            font-size: $gTitle;
+         }
+    }
+    h2{
+        font-family: $cormorant;
+        font-weight: 200;
+    }
+    @media screen and (min-width: 768px) {
+        p{
+            font-size: $gText;
+        }
+     }
+    .pText{
+        font-size: $mText;
+        @media screen and (min-width: 768px) {
+            font-size: $mText;
+         }
+    }
+    .imgcover{
+        @include imgMixin();
+    }
+    .blanc{
+        color: $blanc;
+    }
+    .black{
+        color: $black;
+    }
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+    }
+    video{
+        @include imgMixin();
+    }
+    .borderBot {
+        position: relative;
+      }
+      .borderBot::after {
+        content: "";
+        height: 1px;
+        width: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        background-color: black;
+        transition: .3s all ease-in-out;
+      }
+      .borderBot:hover::after {
+        width: 100%;
+      }
+      .borderBot:not(:hover)::after {
+        right: 0;
+        left: auto;
+      }
+    .text{
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        width: 90%;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            top: 70%;
+         }
+        h1{
+            margin-bottom: 3%;
+            @media screen and (min-width: 768px) {
+                margin-bottom: 2%;
+             }
+        }
+    }
+    .sign{
+        display: inline-block;
+        font-size: $pText;
+        width: 100%;
+        background-color: #c9c5be;
+        padding: 20px;
+    }
+    .fleche{
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            img{
+                margin: 0 3px;
+            }
+        }
+    }
+    li{
+        list-style: none;
+        position: relative;
+        ul{
+            position: absolute;
+            z-index: 1;
+            height: 0;
+            overflow: hidden;
+            background: #f8f6f3;
+            padding: 0.5rem;
+            top: 110%;
+            border: 1px solid;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            li{
+                text-wrap: nowrap;
+                margin: 10px 0;            
+            }
+        }
+        &:hover ul{
+            opacity: 1;
+            height: 160px;
+            position: absolute;
+            transition: all 0.5s ease-in-out;   
+        }
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,99 @@
+@use '../abstracts' as *;
+
+hr{
+    margin: 5rem 1rem;
+}
+
+footer{
+    padding: 0 1rem;
+    .section1{
+        margin-bottom: $spacingXl;
+        img{
+            display: block;
+            width: 40%;
+        }
+        p{
+            display: none;
+        }
+    
+    }
+    
+    .section2{
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        margin-bottom: $spacingMd;
+        @media screen and (min-width: 768px) {
+            border-top: none;
+            border-bottom: none;
+         }
+        ul{
+            margin: 20px 0;
+            h4{
+               font-weight: 200; 
+               margin-bottom: $spacingMd;
+            }
+            li{
+                list-style: none;
+                font-size: $gText;
+                font-weight: 200;
+                color: rgb(123, 123, 123);
+                margin-bottom: $spacingXs;
+            }
+        }
+        .privacy{
+            display: none;
+        }
+    }
+    .section3{
+        p{
+            font-family: $cormorant;
+            font-size: $gText;
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            margin: $spacingMd 0;
+            padding-bottom: $spacingMd;
+            border-bottom: 1px solid;
+            input{
+                border: none;
+                background-color: #f8f6f3;
+            }
+            a{
+                color: rgb(123, 123, 123);
+            }
+        }
+        .reseaux{
+            a{
+                display: inline-block;
+                margin-bottom: $spacingMd;
+                img{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+    .textt{
+        margin-bottom: $spacingMd;
+        border-top: 1px solid;
+        @media screen and (min-width: 768px) {
+            border-top: none;
+         }
+        p{
+            margin-top: 20px;
+            color: rgb(123, 123, 123);
+        }
+    }
+    margin-bottom: $spacingXl;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2.5rem;
+        &>*{
+            width: 30%;
+        }
+     }
+}

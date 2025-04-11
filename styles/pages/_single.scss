@@ -1,0 +1,137 @@
+@use '../abstracts' as *;
+@use '../pages/home';
+
+.grandwrap{
+    display: flex;
+    flex-direction: column;
+    .payement{
+        padding:0 1rem;
+        h1{
+            font-size: 1.5rem;
+            margin-bottom: $spacingMd;
+        }
+    }
+    hr{
+        margin: 2rem 0;
+    }
+    .quantite{
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+        border: 1px solid;
+        margin:1rem 0;
+        padding:0.5rem 0.5rem;
+    }
+    .sign{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .bigHeart{
+        display: flex;
+        margin: $spacingLg 0;
+        .imgheart{
+            width: 20%;
+        }
+        p{
+            width: 50%;
+            padding: 0 12px 0 15px;
+            line-height: 30px;
+            font-size: 0.8rem;
+            span{
+                display: block;
+            }
+        }
+        .space{
+            width: 30%;
+            padding: 20px;
+        }
+        .sign{
+            font-size: 0.7rem;
+            width: 100%;
+        }
+    }
+    .share{
+        display: flex;
+        p{
+            margin-left: 15px;
+            text-transform: uppercase;
+        }
+    }
+    .description{
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        margin: $spacingXl 0;
+        padding: 1rem 20px;
+        summary{
+            font-family: $cormorant;
+            font-size: 1.2rem;
+        }
+        p{
+            margin-bottom: $spacingMd;
+            font-size: 1rem;
+        }
+        &:last-child{
+            margin-top: $spacingMd;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0 2rem;
+        justify-content: space-between;
+        .wapper{
+            width: 60%;
+            padding: 0;
+        }
+        .payement{
+            width: 35%;
+            height: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+            padding: 0;
+        }
+        .description{
+            width: 60%;
+            padding:0;
+        }
+        margin-bottom: $spacingXl;
+     }
+}
+.singlelien{
+    padding:0 1rem;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding:0 2.5rem;
+    }
+}
+.singblock{
+    position: relative;
+    overflow: hidden;
+    .singlehover{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+        opacity: 0;
+        transition: transform 0.5s ease-in-out;
+     }
+     &:hover .singlehover{
+        opacity: 1;
+        transform: scale(1);
+     }
+    .textsingle{
+     text-align: center;
+     font-size: 0.8rem;
+     padding: 10px 10px;
+
+     @media screen and (min-width: 768px) {
+        p{
+            font-size: 1rem;
+        }
+    }
+    }
+}

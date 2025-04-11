@@ -1,0 +1,204 @@
+@use '../abstracts' as *;
+
+.bannier{
+    position: relative;
+    height: 35vh;
+    margin-bottom: $spacingLg;
+    @media screen and (min-width: 768px) {
+        height: 55vh;
+     }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.105);
+    }
+    .borderBot::after {
+        background-color: $blanc;
+      }
+}
+
+.wapper{
+    padding: 0 1rem;
+    margin: $spacingLg 0;
+    @media screen and (min-width: 768px) {
+        padding: 0 2.5rem;
+     }
+    .follow{
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: $spacingMd;
+    }
+    .wapperBlock{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        .block{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.105);
+            }
+            .text{
+                top: 78%;
+            }
+            .lien{
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50% ,-50%);
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 10px;
+                @media screen and (min-width: 768px) {
+                    top: 95%;
+                }
+                img{
+                    filter: invert(1);
+                }
+                p{
+                    font-family: $cormorant;
+                    padding-top: 8px;
+                    @media screen and (min-width: 768px) {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        .big{
+            grid-column: span 12;
+            height: 50vh;
+            @media screen and (min-width: 768px) {
+                grid-column: span 6;
+                height: 80vh;
+             }
+        }
+        .moyen{
+            grid-column: span 6;
+            @media screen and (min-width: 768px) {
+                grid-column: span 3;
+             }
+        }
+        .petit{
+            grid-column: span 6;
+            @media screen and (min-width: 768px) {
+                grid-column: span 3;
+             }
+        }
+        .singlemoyen{
+            grid-column: span 12;
+            @media screen and (min-width: 768px) {
+                grid-column: span 6;
+             }
+        }
+    }
+}
+
+.bannierText{
+    position: relative;
+    background-color: #ebebe7;
+    padding: 10px 10px;
+    margin: 0 1rem;
+    margin-bottom: $spacingLg;
+    @media screen and (min-width: 768px) {
+        margin: 0 2.5rem;
+        margin-bottom: $spacingLg;
+     }
+    .cadre{
+        border: 1px solid $black;
+        padding: 30px;
+        h1{
+            margin-bottom: $spacingLg;
+        }
+        h2{
+            margin-bottom: $spacingMd;
+        }
+        p{
+            margin-bottom: $spacingLg;
+            font-weight: 200; 
+        }
+    }
+}
+
+.spring{
+    position: relative;
+    padding: 10px 10px;
+    padding: 0 1rem;
+    margin-bottom: $spacingLg;
+    @media screen and (min-width: 768px) {
+        margin: 0 2.5rem;
+        margin-bottom: $spacingLg;
+     }
+    p{
+        margin-bottom: $spacingLg;   
+    }
+    .lien{
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .fleche{
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            img{
+                margin: 0 3px;
+            }
+        }
+    }
+}
+
+.bigBannier{
+    margin-bottom: $spacingLg;
+}
+
+.Joinbannier{
+    margin-bottom: $spacingLg;
+    position: relative;
+    height: 50vh;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.105);
+    }
+    .imgcover{
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+    .text{
+        top: 50%;
+        p{
+            margin-bottom: $spacingXl;
+        }
+        input{
+            display: inline-block;
+            width: 100%;
+            border: 1px solid #ebebe7;
+            padding: 10px;
+            margin-bottom: $spacingMd;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: block;
+        .text{
+            top: 50%;
+            width: 30%;
+            p{
+                margin-bottom: $spacingMd;
+            }
+        }
+    }
+}
+
+
+
